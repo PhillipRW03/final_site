@@ -1,0 +1,265 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.pets {
+    background-image: url("/images/pets2.jpg");
+}
+
+h1 {
+    font-size: 36px;
+    font-family: Aladin;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    margin: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+h3 {
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    margin: 20px;
+}
+
+div {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 2pc;
+    margin-left: 20px;
+}
+
+img {
+    border: 5px solid white;
+    padding: 1px;
+    margin: 20px;
+    border-top-right-radius: 30px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.scroll-container:focus {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.scroll-container img {
+    padding: 10px;
+}
+
+figcaption {
+    margin: 20px;
+}
+
+video {
+    border: 5px solid white;
+    padding: 1px;
+    margin: 20px;
+    border-top-right-radius: 30px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+ol {
+    margin-bottom: 50px;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: #686666;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.likes {
+    display: flex;
+    justify-content: None;
+}
+
+nav {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+#skip {
+    display: none;
+}
+
+.thumbnail {
+    display: block;
+    border: 5px solid white;
+    margin: auto;
+    width: 450px;
+}
+
+nav li.current a {
+    position: relative;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    /* Set the text color for the current page */
+}
+
+nav li a {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin: 20px;
+    border: 2px solid white;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.dropbtn {
+    display: none;
+}
+
+/* #skip {
+    display: none;
+}
+
+#skip:focus {
+    display: inline;
+} */
+
+@media (prefers-reduced-motion: no-preference) {
+    nav li:hover {
+        transform: scale(1.25);
+    }
+
+    nav li a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    video:hover {
+        transform: scale(1.1) rotate(5deg);
+        opacity: 0.7;
+    }
+
+    img:hover {
+        transform: scale(1.1) rotate(5deg);
+        opacity: 0.7;
+    }
+}
+
+
+.travel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+@media (min-width: 768px){
+    #skip {
+        display:inline;
+        text-transform: uppercase;
+        margin: 20px;
+        background: black;
+        left: 0;
+        -webkit-transition: top 1s ease-out;
+        transition: top 1s ease-out;
+        z-index: 1;
+        padding: 6px;
+        position: relative;
+        top:-20px;
+    }
+    
+    #skip:focus{
+        display: inline;
+        position: static;
+        width: auto;
+        height: auto;
+        border: solid black 2px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 28px;
+        /* Adjust font size for better tablet readability */
+    }
+
+    h2 {
+        font-size: 20px;
+        /* Adjust font size for better tablet readability */
+        margin: 10px;
+        /* Reduce margin for a more compact layout */
+    }
+
+    h3 {
+        font-size: 16px;
+        /* Adjust font size for better tablet readability */
+        margin: 10px;
+        /* Reduce margin for a more compact layout */
+    }
+
+    p {
+        margin-left: 10px;
+        /* Reduce margin for a more compact layout */
+    }
+
+    img,
+    video {
+        margin: 10px;
+        /* Reduce margin for a more compact layout */
+        border-top-right-radius: 20px;
+        /* Adjust border radius for a more compact layout */
+    }
+
+    nav {
+        padding: 5px;
+        /* Reduce padding for a more compact layout */
+    }
+
+    .thumbnail {
+        width: 300px;
+        /* Adjust width for a more compact layout */
+    }
+
+    .dropbtn {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border: 1px solid white;
+        margin-bottom: 5px;
+        display: flex;
+    }
+
+    /* Style the container that holds the dropdown content */
+    .dropdown {
+        position: relative;
+        display: flex;
+    }
+
+    /* Style the dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        color: white;
+        min-width: 400px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    img[src$=".gif"] {
+        display: none;
+    }
+}
